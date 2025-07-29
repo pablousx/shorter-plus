@@ -3,6 +3,7 @@ import Footer from '@/app/ui/Footer/Footer'
 import SavedUrlsModal from '@/app/ui/SavedUrls/SavedUrlsModal/SavedUrlsModal'
 import Text from '@/app/ui/Text/Text'
 import TextBox from '@/app/ui/TextBox/TextBox'
+import { Analytics } from '@vercel/analytics/react'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       <section>
         <span>
           <Text as="h1">
-            Short your URL{' '}
+            Short your URL&nbsp;
             <Text as="span" alt serif>
               at the speed of light
             </Text>
@@ -25,6 +26,8 @@ export default function Home() {
         <TextBox />
       </section>
       <Footer />
+
+      <Analytics debug={false} />
     </main>
   )
 }
